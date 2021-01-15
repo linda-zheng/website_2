@@ -27,14 +27,12 @@ function WorkCard(props, key) {
     var descriptionList = []
     for (var i = 0; i < props.description.length; i++) {
         var tempDescription = []
-        console.log(props.description[i].length)
         for (var j = 0; j < props.description[i].length; j++) {
             if (j%2 == 0){
                 tempDescription.push(<span className="description">{props.description[i][j]}</span>)
             } else {
                 tempDescription.push(<span className="keyword">{props.description[i][j]}</span>)
             }
-            console.log(tempDescription)
         }
         descriptionList.push(<ListItem key={i}><div> -&emsp;{tempDescription}</div></ListItem>)
     }

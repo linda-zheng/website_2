@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f0523c60.chunk.css",
+    "main.js": "/static/js/main.2ad64757.chunk.js",
+    "main.js.map": "/static/js/main.2ad64757.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c579b0b4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c579b0b4.js.map",
+    "static/js/2.0ff5388a.chunk.js": "/static/js/2.0ff5388a.chunk.js",
+    "static/js/2.0ff5388a.chunk.js.map": "/static/js/2.0ff5388a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f0523c60.chunk.css.map": "/static/css/main.f0523c60.chunk.css.map",
+    "static/js/2.0ff5388a.chunk.js.LICENSE.txt": "/static/js/2.0ff5388a.chunk.js.LICENSE.txt",
+    "static/media/doc.2fd446bd.svg": "/static/media/doc.2fd446bd.svg",
+    "static/media/email.a7bdedcb.svg": "/static/media/email.a7bdedcb.svg",
+    "static/media/github.16a9304e.svg": "/static/media/github.16a9304e.svg",
+    "static/media/linkedin.12fdf15f.svg": "/static/media/linkedin.12fdf15f.svg",
+    "static/media/profilepic.57774a13.jpg": "/static/media/profilepic.57774a13.jpg",
+    "static/media/resume.37925c8f.pdf": "/static/media/resume.37925c8f.pdf",
+    "static/media/shopify.1e72e870.png": "/static/media/shopify.1e72e870.png",
+    "static/media/wish.41f6f73a.png": "/static/media/wish.41f6f73a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c579b0b4.js",
+    "static/js/2.0ff5388a.chunk.js",
+    "static/css/main.f0523c60.chunk.css",
+    "static/js/main.2ad64757.chunk.js"
+  ]
+}

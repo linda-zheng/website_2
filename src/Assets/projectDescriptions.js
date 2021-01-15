@@ -29,7 +29,7 @@ var projectDescriptions = [
     ),
     new toDictionary(
         githubIcon,
-        "Remote-controlled Drone",
+        "Remote-Controlled Drone",
         "An android app that controls our DIY drone.",
         ["C++", "Arduino UNO", "NodeMCU", "ESP8266"],
         "https://github.com/thelindazheng/remote_controlled_drone"

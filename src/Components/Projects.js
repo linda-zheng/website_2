@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 import projectDescriptions from '../Assets/projectDescriptions';
 
-import { Container, Grid } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 
 const Projects = () => {
     var projectCards = []
@@ -12,9 +12,9 @@ const Projects = () => {
     }
     return (
       <Container maxWidth="lg">
-      <Grid container spacing={3}>
+      <Box display="flex" flexDirection="width" flexWrap="wrap" justifyContent="center">
         {projectCards}
-      </Grid>
+      </Box>
       </Container>
     )
   }

@@ -11,9 +11,12 @@ import Projects from './Components/Projects';
 import Hobbies from './Components/Hobbies';
 import ContactMe from './Components/ContactMe';
 
+import Header from './Components/Header';
+
 function App() {
   return (
     <div className="App">
+    <Header/>
     <Box display="flex" flexDirection="column" width={1}>
       <Section
         color='light'

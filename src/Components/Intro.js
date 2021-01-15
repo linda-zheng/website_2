@@ -1,5 +1,5 @@
 import React from 'react';
-import './CSS/Section.css';
+import './CSS/Text.css';
 
 import profilePic from '../Assets/profilepic.jpg';
 

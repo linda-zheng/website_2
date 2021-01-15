@@ -1,24 +1,87 @@
 import React from 'react';
 
-function WorkCard(jobDescription, key) {
-    return (
-        <GridItem rowSpan={{ base: 2 }} colSpan={{ base: 20 }} mb={{ base: "3vh" }} key={key}>
-            <a href={jobDescription.link}>
-                <div className="WorkExperienceTextContainer">
-                    <Flex className="WorkExperienceCard" direction="row">
-                        <Box flexBasis={{ md: "35%", lg: "30%", xl: "25%" }} className="WorkExperienceImageWrapper">
-                            <img src={jobDescription.image} className="WorkExperienceImage" alt="work experience" />
-                        </Box>
-                        <Stack flexBasis={{ base: "100%", md: "65%", lg: "70%", xl: "75%" }} ml={{ md: "1.5vw" }} p={{ base: "2vh", md: "1.5vh" }}>
-                            <Text className="WorkExperienceTextTitle" fontSize={{ base: "30px", md: "38px", lg: "40px" }} >{jobDescription.title}</Text>
-                            <Text className="WorkExperienceTextPosition" fontSize={{ base: "20px", md: "20px", lg: "20px" }}>{jobDescription.jobPosition} - {jobDescription.location}</Text>
-                            <Text fontSize={{ base: "17px", lg: "19px" }} className="WorkExperienceCardText">{jobDescription.text}</Text>
-                        </Stack>
-                    </Flex>
-                </div>
-            </a>
-        </GridItem>
-    );
+import "./CSS/Card.css"
+
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+
+import Collapse from '@material-ui/core/Collapse';
+import { Container, Box, Grid, List, ListItem } from '@material-ui/core';
+
+function WorkCard(props, key) {
+    const [expanded, setExpanded] = React.useState(false);
+    const [btnText, setBtnText] = React.useState('Show More');
+
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+        changeButtonName();
+    };
+    const changeButtonName = () => {
+        if (btnText === 'Show More') {
+            setBtnText('Show Less');
+        } else {
+            setBtnText('Show More');
+        }        
+    }
+    var descriptionList = []
+    for (var i = 0; i < props.description.length; i++) {
+        var tempDescription = []
+        console.log(props.description[i].length)
+        for (var j = 0; j < props.description[i].length; j++) {
+            if (j%2 == 0){
+                tempDescription.push(<span className="description">{props.description[i][j]}</span>)
+            } else {
+                tempDescription.push(<span className="keyword">{props.description[i][j]}</span>)
+            }
+            console.log(tempDescription)
+        }
+        descriptionList.push(<ListItem key={i}><div> -&emsp;{tempDescription}</div></ListItem>)
+    }
+
+  return (
+    <Box className="card-shadow" my="30px" key={key}>
+        <Card variant="outlined">
+        <CardContent className="text-left">
+            <Box display="flex" flexDirection="width" px="30px">
+                <Box display="flex" alignItems="center">
+                    <img src={props.image} style={{ height: 'auto', width: '10vh', bottom: "0"}}/>
+                </Box>
+                <Box p={3}>
+                    <Grid container alignItems="baseline">
+                        <Grid container item xs={6} justify="flex-start">
+                            <div className="title">{props.title}</div>
+                        </Grid>
+                        <Grid container item xs={6} justify="flex-end">
+                            <div className="date">{props.date}</div>
+                        </Grid>
+                    </Grid>
+                    <Grid container>
+                        <Grid container item xs={6} justify="flex-start">
+                            <div className="position">{props.position}</div>
+                        </Grid>
+                        <Grid container item xs={6} justify="flex-end">
+                            <div className="location">{props.location}</div>
+                        </Grid>
+                    </Grid>
+                    <hr color="#BAB2B5" style={{width:"100%", textAlign:"left", marginLeft:"0"}}/>
+                    <div className="blurb">{props.blurb}</div>
+                </Box>
+            </Box>
+        </CardContent>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <CardContent className="text-left">
+                <Box display="flex" flexDirection="width" px="50px">
+                    <List>
+                        {descriptionList}
+                    </List>
+                </Box>       
+            </CardContent>
+        </Collapse>
+        <Button size="small" onClick={handleExpandClick}>{btnText}</Button>
+        </Card>    
+    </Box>
+  );
 }
 
 export default WorkCard;

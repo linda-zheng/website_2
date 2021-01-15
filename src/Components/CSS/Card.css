@@ -1,0 +1,35 @@
+.title{
+    color: #283747;
+    font-size: 32px;
+    font-weight: bold;
+}
+.position{
+    color: #283747;
+    font-size: 22px;
+    font-weight: bold;
+}
+.blurb, .date, .location{
+    color: #5D6D7E;
+    font-size: 20px;
+}
+.description{
+    color: #5D6D7E;
+    font-size: 18px;
+}
+.keyword{
+    color: #283747;
+    font-size: 18px;
+    font-weight: bold;
+}
+.text-left {
+    text-align: left;
+}
+.card-shadow{
+    box-shadow: 0 0 8px 0px #CCC;
+    transition: all 0.2s ease-out;
+}
+    
+.card-shadow:hover {
+    transform: translate(0px, -5px);
+    box-shadow: 0 5px 13px 5px #CCC;
+}

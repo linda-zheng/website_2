@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "thelindazheng",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
